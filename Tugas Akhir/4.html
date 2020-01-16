@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Javascript</title>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">	
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap.min.js"></script>
+</head>
+<body>	
+	<!-- membuat menu navigasi -->
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Pintar C</a>
+			</div>
+			
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="profil.html">Profil <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tutorial <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="single.html">C</a></li>
+							<li><a href="3.html">Struct Data C</a></li>
+							<li><a href="4.html">Javascript</a></li>							
+							<li><a href="2.html">Java</a></li>							
+						</ul>
+					</li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" data-toggle="modal" data-target="#modal-login">Login</a></li>					
+					<li><button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#modal-daftar">Daftar</button></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>	
+
+	<!-- Modal -->
+	<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Login</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" class="form-control">
+						</div>						
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+					<button type="button" class="btn btn-primary">Login</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal-daftar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Daftar</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label>Nama</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" class="form-control">
+						</div>						
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+					<button type="button" class="btn btn-primary">Daftar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- akhir modal -->
+
+	<!-- akhir menu navigasi -->
+
+	<div class="container">	
+		<div class="col-md-12" style="padding: 0">
+			<ol class="breadcrumb">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">Tutorial</a></li>
+				<li class="active">Tutorial Javascript : Tutorial Javascript</li>
+			</ol>
+		</div>
+
+		<div class="col-md-12" style="padding: 0">
+			<h2 style="margin-top: 0">Javascript – Array Function pada ES6</h2>
+			<br/>
+			<div class="thumbnail">
+				<img src="gambar/js.png">
+			</div>
+			<p style="text-align: justify;">
+				<strong>Pintar C -</strong>
+				Pada artikel ini, kita akan membahas fitur baru di ES6 yaitu array helper function. 
+				Ada beberapa function yang sering digunakan untuk melakukan operasi pada array di 
+				javascript . Diantaranya yang akan kita bahas : forEach, map, filter, find, every, some dan reduce.
+			</p>
+			
+			<h3>ForEach()</h3>
+
+			<p style="text-align: justify;">
+				Sesuai namanya, fungsi yang satu ini digunakan untuk melakukan iterasi atau looping 
+				pada sebuah array. Setiap elemen akan diakses satu per satu secara berurutan.
+			</p>
+
+			<h3>Map()</h3>
+			
+			<p style="text-align: justify;">
+				Fungsi map cara kerjanya mirip dengan forEach. Dia akan mengiterasikan 
+				setiap elemen dalam sebuah array. Bedanya, fungsi map() akan mengembalikan 
+				sebuah nilai dan dapat dimasukkan ke dalam variable array yang baru.
+			</p>
+
+			<h3>Filter()</h3>
+
+			<p style="text-align: justify;">
+				Method filter, digunakan untuk membantu kita melakukan filtering terhadap 
+				sebuah data. Untuk cara kerja dari method filter() ini sebenarnya mirip 
+				dengan map(). Kedua fungsi ini sama-sama melakukan return, bedanya adalah 
+				method filter() akan mereturn nilai boolean dalam setiap iterasinya. Setiap 
+				return yang bernilai true akan direturn pada result array.
+			</p>
+				
+			<h3>Find()</h3>
+			<p style="text-align: justify;">
+				find digunakan untuk mempermudah kita mencari sebuah data dalam suatu array. 
+				Method find berbeda dengan filter. Fungsi filter akan melakukan penyaringan 
+				terhadap array dan mengembalikan nilai berupa list of data (array). Sedangkan find, 
+				hanya akan mencari 1 data saja sesuai dengan kriteria yang diberikan. Jika terdapat dua 
+				atau lebih data yang memenuhi kriteria, maka data yang pertamalah yang akan di return.
+			</p>
+
+			<h3>every() dan some()</h3>
+			<p style="text-align: justify;">
+				Method every() dan some() memiliki fungsi yang mirip. Keduanya sama-sama bertugas 
+				untuk menentukan apakah data dalam sebuah array memenuhi kriteria tertentu. Method 
+				every() hanya akan mereturn nilai true jika semua datanya sesuai kriteria sedangkan 
+				some() akan mereturn nilai true ketika salah satu data sudah memenuhi kriteria.
+			</p>
+
+			<p style="text-align: justify">
+				Sekian tutorial Javascript – Array Function pada ES6. Semoga bermanfaat.
+			</p>
+			<br/>	
+			<h3>Related Posts</h3><br/>
+
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/java.png" alt="...">
+					<div class="caption">
+						<h3><a href="2.html">Pengenalan Bahasa Java</a></h3>
+						<p>
+							Java adalah salah satu bahasa pemrograman <strong>berorerientasi objek</strong> yang dikembangkan 
+							oleh <em>Sun Microsystems</em> sejak tahun 1991. Bahasa ini dikembangkan dengan model yang 
+							mirip dengan bahasa C++ dan Smalltalk, namun dirancang agar...
+						</p>								
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/data_struct.jpg" alt="...">
+					<div class="caption">
+						<h3><a href="3.html">Tutorial Struct Data C - Single Linked List</a></h3>
+						<p>
+							Single Linked List adalah salah satu bentuk
+							implementasi dari struktur data yang paling sederhana. Seperti
+							yang dijelaskan sebelumnya dalam...
+						</p>								
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/C.jpg" alt="...">
+					<div class="caption">
+						<h3><a href="single.html">Operator dalam Bahasa C</a></h3>
+						<p>
+							Operator dan Operand dalam Bahasa C merupakan sebuah istilah yang tidak asing lagi dalam 
+							pemrograman. Operator adalah simbol atau karakter yang...
+						</p>								
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<br/>
+	
+	
+	<div class="clearfix"></div>
+		
+	<nav class="navbar navbar-default" style="bottom: 0;margin: 0">
+		<div class="container">			
+			<ul class="nav navbar-nav">
+				<li><a href="#">Copyright @ 2019 Anas Aditia Nugraha. All rights reserved.</a></li>				
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Develop by www.pintarc.com</a></li>									
+			</ul>
+		</div>
+	</nav>
+	
+</body>
+</html>

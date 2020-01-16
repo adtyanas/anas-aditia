@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>C</title>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">	
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap.min.js"></script>
+</head>
+<body>	
+	<!-- membuat menu navigasi -->
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Pintar C</a>
+			</div>
+			
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="profil.html">Profil <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tutorial <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+                            <li><a href="single.html">C</a></li>
+                            <li><a href="3.html">Struct Data C</a></li>
+                            <li><a href="4.html">Javascript</a></li>							
+                            <li><a href="2.html">Java</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" data-toggle="modal" data-target="#modal-login">Login</a></li>					
+					<li><button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#modal-daftar">Daftar</button></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>	
+
+	<!-- Modal -->
+	<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Login</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" class="form-control">
+						</div>						
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+					<button type="button" class="btn btn-primary">Login</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal-daftar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Daftar</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label>Nama</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" class="form-control">
+						</div>						
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+					<button type="button" class="btn btn-primary">Daftar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- akhir modal -->
+
+	<!-- akhir menu navigasi -->
+
+	<div class="container">	
+		<div class="col-md-12" style="padding: 0">
+			<ol class="breadcrumb">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">Tutorial</a></li>
+				<li class="active">Tutorial C : Tutorial Dasar Belajar Bahasa C</li>
+			</ol>
+		</div>
+
+		<div class="col-md-12" style="padding: 0">
+			<h2 style="margin-top: 0">Operator dalam Bahasa C</h2>
+			<br/>
+			<div class="thumbnail">
+				<img src="gambar/c.jpg">
+			</div>
+			<p style="text-align: justify;">
+				<strong>Pintar C -</strong>
+				Operator dan Operand dalam Bahasa C merupakan sebuah istilah yang tidak asing lagi dalam 
+				pemrograman. Operator adalah simbol atau karakter yang digunakan oleh program untuk melakukan sebuah operasi dalam
+				sebuah proses program seperti operasi bilangan dan operasi string. Bahasa C mengenal penggunaan beberapa operator
+				dengan fungsi yang berbeda-beda. Setiap operator memiliki kedudukan atau hirarki saat penanganan program. Operator
+				dengan hirarki lebih tinggi akan dikerjakan lebih dahulu dibandingkan operator dengan hirarki lebih rendah.
+			</p>
+			<br/>
+
+			<p style="text-align: justify;">
+				Ada beberapa operator dalam bahasa C, dan berikut adalah contoh penggunaannya:
+			</p>
+
+			<ul>
+				<li>
+					<h3>Operator Aritmatika</h3>
+				</li>
+				<p style="text-align: justify;">
+					Operator Aritmatika adalah operator yang digunakan untuk mengoperasikan 
+					bilangan integer, float dan lain sebagainya. Biasanya operatornya berupa 
+					penjumlahan, pengurangan, pembagian, perkalian, increament, decreament dan modulus. 
+					Increament merupakan operasi untuk menambahkan value sejumlah 1 sedangkan decreament 
+					akan mengurangi value sejumlah 1.
+				</p>
+
+				<table class="table table-striped" border="1" width="80%" align="center">
+					<thead>
+						<tr>
+							<th>Operator</th>
+							<th>Nama</th>
+							<th>Contoh</th>
+							<th>Hasil</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>+</td>
+							<td>Penjumlahan</td>
+							<td>a = b + c</td>
+							<td>b ditambah dengan c</td>
+						</tr>
+						<tr>
+							<td>-</td>
+							<td>Pengurangan</td>
+							<td>a = b - c</td>
+							<td>b dikurangi dengan c</td>
+						</tr>
+						<tr>
+							<td>*</td>
+							<td>Perkalian</td>
+							<td>a = b * c</td>
+							<td>b dikali dengan c</td>
+						</tr>
+						<tr>
+							<td>/</td>
+							<td>Pembagian</td>
+							<td>a = b / c</td>
+							<td>b dibagi dengan c</td>
+						</tr>
+						<tr>
+							<td>%</td>
+							<td>Modulus</td>
+							<td>a = b % c</td>
+							<td>sisa dari b dibagi c</td>
+						</tr>
+						<tr>
+							<td>++</td>
+							<td>Increament</td>
+							<td>a++</td>
+							<td>a = a + 1</td>
+						</tr>
+						<tr>
+							<td>-</td>
+							<td>Decreament</td>
+							<td>a-</td>
+							<td>a = a - 1</td>
+						</tr>
+					</tbody>
+				</table>
+			</ul>
+			<br/>
+
+			<ul>
+				<li>
+					<h3>Operator Bitwise</h3>
+				</li>
+				<p style="text-align: justify;">
+					Adalah operator yang menangani operasi bilangan biner seperti 
+					and, or, not dan sebagainya. Operator bitwise ini akan menangani 
+					data sesuai dengan tipenya. Misalnya sebuah data bertipe char atau 
+					byte maka bilangan yang dihasilkan adalah sebesar 8 bit.
+				</p>
+	
+				<table class="table table-striped" border="1" width="80%" align="center">
+					<thead>
+						<tr>
+							<th>Operator</th>
+							<th>Nama</th>
+							<th>Contoh</th>
+							<th>Biner</th>
+							<th>Hasil Biner</th>
+							<th>Hasil Decimal</th>
+							</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>&</td>
+							<td>AND</td>
+							<td>x = 5 & 1</td>
+							<td>0101 & 0001</td>
+							<td>0001</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>|</td>
+							<td>OR</td>
+							<td>x = 5 | 1</td>
+							<td>0101 | 0001</td>
+							<td>0101</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>~</td>
+							<td>NOT</td>
+							<td>x = ~5</td>
+							<td>~0101</td>
+							<td>1010</td>
+							<td>10</td>
+						</tr>
+						<tr>
+							<td>^</td>
+							<td>XOR</td>
+							<td>x = 5 ^ 1</td>
+							<td>0101 ^ 0001</td>
+							<td>0100</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td><<</td>
+							<td>Left shift</td>
+							<td>x = 5 << 1</td>
+							<td>0101 << 1</td>
+							<td>1010</td>
+							<td>10</td>
+						</tr>
+						<tr>
+							<td>>></td>
+							<td>Left shift</td>
+							<td>x = 5 >> 1</td>
+							<td>0101 << 1</td>
+							<td>0010</td>
+							<td>2</td>
+						</tr>
+					</tbody>
+				</table>
+			</ul>
+			<br/>
+
+			<ul>
+				<li>
+					<h3>Operator Penugasan</h3>
+				</li>
+				<p style="text-align: justify;">
+					Adalah operator yang digunakan untuk memberi nilai pada sebuah 
+					variabel. Operator penugasan yang paling dasar adalah sama dengan (=). 
+					Dari operator ini dapat dikembangkan beberapa operator 
+					penugasan lain seperti +=, -= dan sebagainya.
+				</p>
+	
+					<table class="table table-striped" border="1" width="80%" align="center">
+					<thead>
+						<tr>
+							<th>Operator</th>
+							<th>Penugasan</th>
+							<th>Sama dengan</th>
+							<th>Deskripsi</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>=</td>
+							<td>x = y</td>
+							<td>x = y</td>
+							<td>variabel x memperoleh nilai dari variabel y</td>
+						</tr>
+						<tr>
+							<td>+=</td>
+							<td>x+ = y</td>
+							<td>x = x + y</td>
+							<td>variabel x memperoleh nilai dari variabel x + y</td>
+						</tr>
+						<tr>
+							<td>-=</td>
+							<td>x- = y</td>
+							<td>x = x - y</td>
+							<td>variabel x memperoleh nilai dari variabel x - y</td>
+						</tr>
+						<tr>
+							<td>*=</td>
+							<td>x* = y</td>
+							<td>x = x * y</td>
+							<td>variabel x memperoleh nilai dari variabel x * y</td>
+						</tr>
+						<tr>
+							<td>/=</td>
+							<td>x/ = y</td>
+							<td>x = x / y</td>
+							<td>variabel x memperoleh nilai dari variabel x / y</td>
+						</tr>
+						<tr>
+							<td>%=</td>
+							<td>x% = y</td>
+							<td>x = x % y</td>
+							<td>variabel x memperoleh nilai dari variabel x % y</td>
+						</tr>
+						<tr>
+							<td><<=</td>
+							<td>x<< = y</td>
+							<td>x = x << y</td>
+							<td>variabel x memperoleh nilai dari variabel x << y</td>
+						</tr>
+						<tr>
+							<td>>>=</td>
+							<td>x>> = y</td>
+							<td>x = x >> y</td>
+							<td>variabel x memperoleh nilai dari variabel x >> y</td>
+						</tr>
+						<tr>
+							<td>&=</td>
+							<td>x& = y</td>
+							<td>x = x & y</td>
+							<td>variabel x memperoleh nilai dari variabel x & y</td>
+						</tr>
+						<tr>
+							<td>|=</td>
+							<td>x| = y</td>
+							<td>x = x | y</td>
+							<td>variabel x memperoleh nilai dari variabel x | y</td>
+						</tr>
+						<tr>
+							<td>^=</td>
+							<td>x^ = y</td>
+							<td>x = x ^ y</td>
+							<td>variabel x memperoleh nilai dari variabel x ^ y</td>
+						</tr>
+					</tbody>
+				</table>
+			</ul>
+			<br/>
+
+			<ul>
+				<li>
+					<h3>Operator Perbandingan</h3>
+				</li>
+				<p style="text-align: justify;">
+					Adalah operator yang digunakan untuk membandingkan dua buah nilai atau variabel. 
+					Nilai yang dibandingkan bisa berupa angka maupun string. Hasil dari perbandingan 
+					ini berupa nilai boolean, yaitu true (benar) atau false (salah).
+				</p>
+	
+				<table class="table table-striped" border="1" width="80%" align="center">
+					<thead>
+						<tr>
+							<th>Operator</th>
+							<th>Nama</th>
+							<th>Contoh</th>
+							<th>Hasil</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>==</td>
+							<td>Sama dengan</td>
+							<td>a == b</td>
+							<td>benar jika a sama dengan b</td>
+						</tr>
+						<tr>
+							<td>!=</td>
+							<td>Tidak sama dengan</td>
+							<td>a != b</td>
+							<td>benar jika a berbeda dengan b</td>
+						</tr>
+						<tr>
+							<td>></td>
+							<td>Lebih besar</td>
+							<td>a > b</td>
+							<td>benar jika a lebih besar dari b</td>
+						</tr>
+						<tr>
+							<td><</td>
+							<td>Lebih kecil</td>
+							<td>a < b</td>
+							<td>benar jika a lebih kecil dari b</td>
+						</tr>
+						<tr>
+							<td>>=</td>
+							<td>Lebih besar atau sama dengan</td>
+							<td>a >= b</td>
+							<td>benar jika a lebih besar atau sama dengan b</td>
+						</tr>
+						<tr>
+							<td><=</td>
+							<td>Lebih kecil atau sama dengan</td>
+							<td>a <= b</td>
+							<td>benar jika a lebih kecil atau sama dengan b</td>
+						</tr>
+					</tbody>
+				</table>
+			</ul>
+			<br/>
+
+			<ul>
+				<li>
+					<h3>Operator Logika</h3>
+				</li>
+				<p style="text-align: justify;">
+					Adalah operator yang digunakan untuk menangani tipe data boolean. 
+					Nilai data boolean bisa berupa kondisi benar (true) atau salah (false) dan bisa juga 1 atau 0.
+				</p>
+		
+				<table class="table table-striped" border="1" width="80%" align="center">
+					<thead>
+						<tr>
+							<th>Operator</th>
+							<th>Nama</th>
+							<th>Contoh</th>
+							<th>Hasil</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>&&</td>
+							<td>And</td>
+							<td>a && b</td>
+							<td>benar jika a dan b bernilai benar</td>
+						</tr>
+						<tr>
+							<td>||</td>
+							<td>Or</td>
+							<td>a || b</td>
+							<td>benar jika salah satu a atau b bernilai benar</td>
+						</tr>
+						<tr>
+							<td>!</td>
+							<td>Not</td>
+							<td>!a</td>
+							<td>benar jika a tidak benar</td>
+						</tr>
+					</tbody>
+				</table>
+			</ul>
+			<br/>
+			
+			<br/>	
+			<h3>Related Posts</h3><br/>
+
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/java.png" alt="...">
+					<div class="caption">
+						<h3><a href="2.html">Pengenalan Bahasa Java</a></h3>
+						<p>
+							Java adalah salah satu bahasa pemrograman <strong>berorerientasi objek</strong> yang dikembangkan 
+							oleh <em>Sun Microsystems</em> sejak tahun 1991. Bahasa ini dikembangkan dengan model yang 
+							mirip dengan bahasa C++ dan Smalltalk, namun dirancang agar...
+						</p>								
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/data_struct.jpg" alt="...">
+					<div class="caption">
+						<h3><a href="3.html">Tutorial Struct Data -  Single Linked List</a></h3>
+						<p>
+							Single Linked List adalah salah satu bentuk
+							implementasi dari struktur data yang paling sederhana. Seperti
+							yang dijelaskan sebelumnya dalam...
+						</p>								
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/js.png" alt="...">
+					<div class="caption">
+						<h3><a href="4.html">Javascript – Array Function pada ES6</a></h3>
+						<p>
+							Pada artikel ini, kita akan membahas fitur baru di ES6 yaitu array helper function. 
+						Ada beberapa function yang sering digunakan untuk melakukan operasi pada...
+						</p>								
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<br/>
+	
+	
+	<div class="clearfix"></div>
+		
+	<nav class="navbar navbar-default" style="bottom: 0;margin: 0">
+		<div class="container">			
+			<ul class="nav navbar-nav">
+				<li><a href="#">Copyright @ 2019 Anas Aditia Nugraha. All rights reserved.</a></li>				
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Develop by www.pintarc.com</a></li>									
+			</ul>
+		</div>
+	</nav>
+	
+</body>
+</html>

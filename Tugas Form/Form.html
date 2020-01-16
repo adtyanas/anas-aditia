@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>	
+	<head> 
+		<meta charset="UTF-8">
+		<title> Tugas Form </title>
+		<style>
+			.box1{
+				background-color:#D3D3D3;
+				position:absolute;
+				margin-left:0%;
+				margin-right:66%;
+				height: 700px;
+			}.box2{
+				background-color:#D3D3D3;
+				position:absolute;
+				margin-left:33%;
+				margin-right:33%;
+				height: 700px;
+			}
+			.box3{
+				background-color:#D3D3D3;
+				position:absolute;
+				margin-left:66%;
+				margin-right:0%;
+				height: 700px;
+			}
+			.box4{
+				position:absolute;
+				margin-top: 710px;
+			}
+			h1{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body style="background-color: #989898">
+		<form name="fmhs" method="post" action="input.php">
+			<!-- Awal Element Form -->
+			<h1>Form Pendaftaran Mahasiswa</h1>
+			<div class="box1">
+				<table>
+					
+						<tr><td>Jurusan</td></tr>
+						<tr><td><input type="text" size="50" name="fjrs" checked></td></tr>
+					
+					
+						<tr><td>Program Studi</td></tr>
+						<tr><td>
+							<select name="fprodi">
+							<option value="A11">S1-T1</option>
+							<option value="A12">S1-DKV</option>
+							<option value="A13">S1-ILKOM</option>
+							<option value="A22">D3-T1</option>
+							</select>
+						</td></tr>
+					
+					
+						<tr><td>Kode Mahasiswa</td></tr>
+						<tr><td><input type="text" size="50" name="fkd"></td></tr>
+									
+					
+						<tr><td>Nama Mahasiswa</td></tr>
+						<tr><td><input type="text" size="50" name="fnama" ></td></tr>
+					
+					
+						<tr><td>NIK Mahasiswa(no KTP)</td></tr>
+						<tr><td><input type="number" name="fnik" required></td></tr>
+					
+					
+						<tr><td>No BPJS</td></tr>
+						<tr><td><input type="number" name="fbpjs"></td></tr>
+					
+					
+						<tr><td>Password</td></tr>
+						<tr><td><input type="text" size="50" name="fpswd" ></td></tr>
+					
+					
+						<tr><td>Tahun Angkatan</td></tr>
+						<tr><td><input type="number" name="fakt"></td></tr>
+					
+					
+						<tr><td>Semester Masuk</td></tr>
+						<tr><td>
+							<select name="fsmst">
+							<option value="1">I</option>
+							<option value="2">II</option>
+							<option value="3">III</option>
+							<option value="4">IV</option>
+							<option value="5">V</option>
+							<option value="6">VI</option>
+							<option value="7">VII</option>
+							<option value="8">VIII</option>
+							</select>
+						</td></tr>
+					
+					
+						<tr><td>Dosen Pembimbing Akademik</td></tr>
+						<tr><td><input type="text" size="50" name="fdpa" ></td></tr>
+					
+					
+						<tr><td>No Telp Orang Tua</td></tr>
+						<tr><td><input type="number" name="fnoot"></td></tr>
+					
+					
+						<tr><td>No Mahasiswa</td></tr>
+						<tr><td><input type="number" name="fnomhs"></td></tr>
+					
+					
+						<tr><td>Email Aktif Mahasiwa</td></tr>
+						<tr><td><input type="text" size="50" name="feam" ></td></tr>
+					
+					
+						<tr><td>Tempat Tinggal Saat Kuliah</td></tr>
+						<tr><td>
+							<select name="ftetg">
+							<option value="KS">Kos</option>
+							<option value="BOT">Bersama Orang Tua</option>
+							<option value="BW">Bersama Wali</option>
+							</select>
+						</td></tr>
+					
+					
+						<tr><td>Jenis Kelamin</td></tr>
+						<tr><td>
+							<input type="radio" value="L" name="fjk" >Laki-laki
+							<input type="radio" value="P" name="fjk" >Perempuan
+						</td></tr>
+			
+				</table>
+			</div>
+			<div class="box2">
+				<table>
+					
+						<tr><td>Agama</td></tr>
+						<tr><td>
+							<select name="fagm">
+							<option value="Islam">Islam</option>
+							<option value="Kristen">Kristen</option>
+							<option value="Katholik">Katholik</option>
+							<option value="Hindu">Hindu</option>
+							<option value="Buddha">Buddha</option>
+							<option value="Konghucu">Konghucu</option>
+							</select>
+						</td></tr>
+					
+					
+						<tr><td>Status Martial</td></tr>
+						<tr><td>
+							<input type="radio" value="M" name="fsm" >Menikah
+							<input type="radio" value="BM" name="fsm" >Belum Menikah
+						</td></tr>
+					
+					
+						<tr><td>Nama Ibu Kandung</td></tr>
+						<tr><td><input type="text" size="50" name="fnaik" ></td></tr>
+					
+					
+						<tr><td>Nama Ayah Kandung</td></tr>
+						<tr><td><input type="text" size="50" name="fnaak" ></td></tr>
+					
+					
+						<tr><td>Tempat Lahir</td></tr>
+						<tr><td><input type="text" size="50" name="ftl" ></td></tr>
+					
+					
+						<tr><td>Tangal Lahir</td></tr>
+						<tr><td><input type="date" name="ftl" required></td></tr>
+					
+					
+						<tr><td>Kewarganegaraan</td></tr>
+						<tr><td>
+							<input type="radio" value="WNI" name="fkwr" >WNI
+							<input type="radio" value="WNA" name="fkwr" >WNA
+						</td></tr>
+					
+					
+						<tr><td>RT / RW Asal</td></tr>
+						<tr><td><input type="number" size="25" name="frta"></td></tr>
+						<tr><td><input type="number" size="25" name="frwa"></td></tr>
+					
+					
+						<tr><td>Desa / Kelurahan Asal</td></tr>
+						<tr><td><input type="text" size="50" name="fdka" ></td></tr>
+					
+					
+						<tr><td>Kecamatan Asal</td></tr>
+						<tr><td><input type="text" size="50" name="fkca" ></td></tr>
+					
+					
+						<tr><td>Kota Asal</td></tr>
+						<tr><td><input type="text" size="50" name="fkta" ></td></tr>
+					
+					
+						<tr><td>Kode Pos Asal</td></tr>
+						<tr><td><input type="number" name="fkpa"></td></tr>
+					
+					
+						<tr><td>Provinsi Asal</td></tr>
+						<tr><td><input type="text" size="50" name="fpa" ></td></tr>
+					
+					
+						<tr><td>Negara Asal</td></tr>
+						<tr><td><input type="text" size="50" name="fnga" ></td></tr>
+					
+				</table>
+			</div>
+			<div class="box3">
+				<table>
+					
+						<tr><td>Alamat Sekarang</td></tr>
+						<tr><td><input type="text" size="50" name="fals" ></td></tr>
+					
+					
+						<tr><td>RT / RW Sekarang</td></tr>
+						<tr><td><input type="number" size="25" name="frts"></td></tr>
+						<tr><td><input type="number" size="25" name="frws"></td></tr>
+					
+					
+						<tr><td>Desa / Kelurahan Sekarang</td></tr>
+						<tr><td><input type="text" size="50" name="fdks" ></td></tr>
+					
+					
+						<tr><td>Kecamatan Sekarang</td></tr>
+						<tr><td><input type="text" size="50" name="fkcs" ></td></tr>
+					
+					
+						<tr><td>Kota Sekarang</td></tr>
+						<tr><td><input type="text" size="50" name="fkts" ></td></tr>
+					
+					
+						<tr><td>Kode Pos Sekarang</td></tr>
+						<tr><td><input type="number" name="fkps"></td></tr>
+					
+					
+						<tr><td>Provinsi Sekarang</td></tr>
+						<tr><td><input type="text" size="50" name="fps" ></td></tr>
+					
+					
+						<tr><td>Transfer</td></tr>
+						<tr><td>
+							<input type="radio" value="Iya" name="ftsf" >Iya
+							<input type="radio" value="TidaK" name="ftsf" >Tidak
+						</td></tr>
+					
+					
+						<tr><td>Jenis Pendaftaran</td></tr>
+						<tr><td>
+							<select name="fjpdf">
+							<option value="PMDK">PMDK</option>
+							<option value="Reguler">Reguler</option>
+							<option value="Beasiswa">Beasiswa</option>
+							</select>
+						</td></tr>
+					
+					
+						<tr><td>Status</td></tr>
+						<tr><td>
+							<select name="fsts">
+							<option value="Mahasiswa">Mahasiswa</option>
+							<option value="Pelajar">Pelajar</option>
+							<option value="Kerja">Kerja</option>
+							</select>
+						</td></tr>
+				</table>
+			</div>
+			<div class="box4">
+				<table>
+					<tr>
+						<td colspan="2"><input type="submit" name="submit" value="Simpan" min="0" max="100"></td>
+						<td colspan="2"><input type="submit" name="batal" value="Batal" min="0" max="100"></td>
+					</tr>
+				</table>
+			</div>
+			
+			<!-- Awal Element Form -->
+		</form>
+	</body>
+	
+</html>

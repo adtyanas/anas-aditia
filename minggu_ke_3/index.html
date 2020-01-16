@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> praktikum Form </title>
+	</head>
+	
+	<body>
+		<form name="fmhs" method="post" action="form.php">
+			<!-- Awal Elemen form -->
+			<table>
+			<tr>
+				<td>Nama</td>
+				<td><input type="text" size="40" name="fnama"></td>
+			</tr>
+			<tr>
+				<td>NIM</td>
+				<td><input maxlength="14" type="text" size="20" name="fnim"></td>
+			</tr>
+			<tr>
+				<td>Jenis Kelamin</td>
+				<td>
+					<input type="radio" value="L" name="fjk" checked>L
+					<input type="radio" value="P" name="fjk" checked>P
+				</td>
+			</tr>
+			<tr>
+				<td>Tanggal lahir</td>
+				<td><input type="date" name="ftl" required></td>
+			</tr>
+			<tr>
+				<td>Prodi</td>
+				<td>
+					<select name="fprodi">
+						<option value="A11">S1-TI</option>
+						<option value="A12">S1-SI</option>
+						<option value="A13">S1-DKV</option>
+						<option value="A22">D3-T1</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Nilai</td>
+				<td><input type="number" name="fnilai"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" name="submit" value="simpan" min="0" max="100"></td>
+			</table>
+			<!-- Akhir Elemen form -->
+		</form>
+	
+	</body>
+
+</html>

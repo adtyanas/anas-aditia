@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h4>LATIHAN JS PART 2</h4>
+    <table border="1">
+        <tr>
+            <td>NIM</td>
+            <td>NAMA</td>
+        </tr>
+        <tr>
+            <td><input type="text" value="A11.2018.10962" id="nim"></td>
+            <td><input type="text" value="ANAS ADITIA NUGRAHA" id="nama"></td>
+        </tr>
+        <tr>
+            <td><input value="A11.2018.10964" id="nim2"></td>
+            <td><input value="AZHARI ARDIANSYAH P" id="nama2"></td>
+        </tr>
+        <tr>
+            <td><input value="A11.2018.10968" id="nim3"></td>
+            <td><input value="ALFI LUKMANUL HAKIM" id="nama3"></td>
+        </tr>
+    </table>
+    <br/><br/>
+
+    <table border="1">
+        <tr>
+            <td>NIM</td>
+            <td><select id="pilih">
+                <option value="Pilih_NIM">Pilih NIM</option>
+                <option value="nim">A11.2018.10962</option>
+                <option value="nim2">A11.2018.10964</option>
+                <option value="nim3">A11.2018.10968</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>NAMA</td>
+            <td><input type="text" id="hslnama"></td>
+        </tr>
+        <tr>
+            <td>NILAI TUGAS</td>
+            <td><input type="text" id="nTugas"></td>
+        </tr>
+        <tr>
+            <td>NILAI UTS</td>
+            <td><input type="text" id="nUTS"></td>
+        </tr>
+        <tr>
+            <td>NILAI UAS</td>
+            <td><input type="text" id="nUAS"></td>
+        </tr>
+        <tr>
+            <td>NILAI AKHIR</td>
+            <td><input type="text" id="nAkhir"></td>
+        </tr>
+    </table>
+    <br/>
+
+    <input type="submit" onclick="hitungNilaiAkhir()" value="SIMPAN">
+    <br/><br/>
+
+    <table border="1">
+        <tr>
+            <td>NIM</td>
+            <td>NAMA</td>
+            <td>NILAI AKHIR</td>
+            <td>STATUS</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="hslnim"></td>
+            <td><input type="text" id="hslnama2"></td>
+            <td><input type="text" id="nAkhir2"></td>
+            <td><input type="text" id="status"></td>
+        </tr>
+    </table>
+
+    <script language="JavaScript" type="text/javascript">
+        function hitungNilaiAkhir(){
+            var Pilih_NIM = document.getElementById("Pilih_NIM").value;
+            var nim = document.getElementById("nim").value;
+            var nim2 = document.getElementById("nim2").value;
+            var nim3 = document.getElementById("nim3").value;
+            var nama = document.getElementById("nama").value;
+            var nama2 = document.getElementById("nama2").value;
+            var nama3 = document.getElementById("nama3").value;
+            var hslnama = document.getElementById("hslnama");
+            var tampil;
+
+            if(pilih==Pilih_NIM)
+            {
+                alert("N/A");
+            }
+            else{
+                if(pilih==nim)
+                {
+                    tampil=nama;
+                }
+                else if(pilih==nim2)
+                {
+                    tampil=nama2;
+                }
+                else if(pilih==nim3)
+                {
+                    tampil=nama3;
+                }
+            }
+            hslnama.value=tampil;
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 70%;
+            }
+            td,th
+            {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            tr:nth-child(even)
+            {
+                background color: #dddddd;
+            }
+        </style>
+    </head>
+
+    <body>
+    <h2>Daftar Mahasiswa</h2>
+    <form name="fmhs" method="post" action="form.php">
+        <table>
+            <tr>
+                <th>NAMA</th>
+                <th>NIM</th>
+                <th>NILAI</th>
+            </tr>
+            <tr>
+                <td><input type="text" size="14" name="fnama"></td>
+                <td><input maxlength="14" type="text" size="14" name="fnim"></td>
+                <td><input type="number" name="fnilai"></td>
+            </tr>
+            <tr>
+                <td><input type="text" size="14" name="fnama2"></td>
+                <td><input maxlength="14" type="text" size="14" name="fnim2"></td>
+                <td><input type="number" name="fnilai2"></td>
+            </tr>
+            <tr>
+               <td><input type="text" size="14" name="fnama3"></td>
+                <td><input maxlength="14" type="text" size="14" name="fnim3"></td>
+                <td><input type="number" name="fnilai3"></td>
+            </tr>
+            <tr>
+                <td><input type="text" size="14" name="fnama4"></td>
+                <td><input maxlength="14" type="text" size="14" name="fnim4"></td>
+                <td><input type="number" name="fnilai4"></td>
+            </tr>
+            <tr>
+                <td><input type="text" size="14" name="fnama5"></td>
+                <td><input maxlength="14" type="text" size="14" name="fnim5"></td>
+                <td><input type="number" name="fnilai5"></td>
+            </tr>
+        </table>
+        <tr>
+			<td colspan="2"><input type="submit" name="submit" value="simpan" min="0" max="100"></td>
+        </tr>
+    </form>
+    </body>
+</html>

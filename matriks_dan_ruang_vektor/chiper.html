@@ -1,0 +1,92 @@
+<script>
+	
+	function toNum(x) {
+		var list = "abcdefghijklmnopqrstuvwxyz";
+		var list2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		return list.indexOf(x) != -1 ? list.indexOf(x) : list2.indexOf(x);
+	}
+	
+	function toString(x) {
+		var list = "abcdefghijklmnopqrstuvwxyz";
+		return list[x];
+	}
+	
+	function getOrdo(x) {
+		return Math.ceil(Math.sqrt(x));
+	}
+	
+	function chip(_plain,_key) {
+		var $_plain = [];
+		var $plain  = [];
+		
+		var a = 0;
+		var b = 0;
+		var _ordo = getOrdo(_key.length);
+		console.log("Ordo_key        : " + _ordo);
+		
+		for (x in _plain) {
+			var temp = 0;
+			
+			for (var y = 0; y < _ordo; y++) {
+				if (b == _key.length) {
+				//console.log("---");
+					b = 0;
+					a += _ordo;
+				}
+				//console.log(a+y,b,y);
+				if (_plain[a+y]) {
+					temp += _plain[a+y] * _key[b];
+				}
+				b++;
+			}
+			
+			temp %= 26;
+			
+			
+			$_plain[x] = temp;
+			$plain[x]  = toString(temp);
+		}
+		console.log("array_chipped   : " + $_plain.join());
+		return $plain.join('');
+	}
+	
+	function encrypt(plain,key) {
+		console.log("\n\n---- ENKRIPSI ----");
+		console.log("plaintext       : " + plain);
+		console.log("key             : " + key);
+		console.log("plain.length    : " + plain.length);
+		console.log("key.length      : " + key.length);
+		
+		var _plain 	= [];
+		var _key 	= [];
+		
+		for (x in plain) {
+			_plain[x] = toNum(plain[x]);
+			//console.log(_plain[x]);
+		}
+		
+		for (x in key) {
+			_key[x] = toNum(key[x]);
+		}
+		
+		console.log("array_plaintext : " + _plain);
+		console.log("array_key       : " + _key);
+				
+		if (_key.length < Math.pow(getOrdo(_key.length),2)) {
+			// console.log("_key harus dilengkapi");
+			var start = _key.length;
+			var end = Math.pow(getOrdo(_key.length),2) - 1;
+			for (var x = start; x <= end; x++) {
+				// console.log("add : _key["+ x +"]");
+				_key[x] = 0;
+			}
+		}
+		
+		console.log("chipped text    : " + chip(_plain,_key));
+	}
+
+	encrypt("amikom","eddd");
+
+	encrypt("tahu","bulat");
+	
+</script>

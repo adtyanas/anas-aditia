@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Struct Data</title>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">	
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap.min.js"></script>
+</head>
+<body>	
+	<!-- membuat menu navigasi -->
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Pintar C</a>
+			</div>
+			
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="profil.html">Profil <span class="sr-only">(current)</span></a></li>					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tutorial <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="single.html">C</a></li>
+							<li><a href="3.html">Struct Data C</a></li>
+							<li><a href="4.html">Javascript</a></li>							
+							<li><a href="2.html">Java</a></li>							
+						</ul>
+					</li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" data-toggle="modal" data-target="#modal-login">Login</a></li>					
+					<li><button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#modal-daftar">Daftar</button></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>	
+
+	<!-- Modal -->
+	<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Login</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" class="form-control">
+						</div>						
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+					<button type="button" class="btn btn-primary">Login</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal-daftar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Daftar</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label>Nama</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" class="form-control">
+						</div>						
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+					<button type="button" class="btn btn-primary">Daftar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- akhir modal -->
+
+	<!-- akhir menu navigasi -->
+
+	<div class="container">	
+		<div class="col-md-12" style="padding: 0">
+			<ol class="breadcrumb">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">Tutorial</a></li>
+				<li class="active">Tutorial Struct Data : Tutorial Struct Data</li>
+			</ol>
+		</div>
+
+		<div class="col-md-12" style="padding: 0">
+			<h2 style="margin-top: 0">Tutorial Struct Data - Single Linked List dengan Bahasa C</h2>
+			<br/>
+			<div class="thumbnail">
+				<img src="gambar/data_struct.jpg">
+			</div>
+			<p style="text-align: justify;">
+				<strong>Pintar C -</strong>
+				 Single Linked List adalah salah satu bentuk
+				implementasi dari struktur data yang paling sederhana. Seperti
+				yang dijelaskan sebelumnya dalam konsep struktur data, single
+				linked list bisa kita analogikan sebuah balok data dalam memory
+				yang saling terhubung satu sama lain. Satu blok data dengan blok
+				data lainnya dihubungkan melalui penanda berupa pointer
+				(pointer bertugas menyimpan address blok data selanjutnya).
+			</p>
+
+			<p style="text-align: justify;">
+				Dalam pembelajaran struktur data, kita akan lebih sering mengenal 
+				dengan istilah :
+			</p>
+			
+			<ul style="text-align: justify;">
+				<li>
+					<strong>Push untuk menambah data</strong>
+					<ul>
+						<li>
+							<strong>PushHead - Menambah data ke barisan paling awal</strong>
+						</li>
+						<li>
+							<strong>PushTail - Menambahkan data ke barisan paling akhir</strong>
+						</li>
+						<li>
+							<strong>PushMid - Menambahkan data ke barisan di tengah (sorting)</strong>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<ul style="text-align: justify;">
+				<li>
+					<strong>Pop untuk menghapus data</strong>
+					<ul>
+						<li>
+							<strong>PopHead - Menghapus data paling awal</strong>
+						</li>
+						<li>
+							<strong>PopTail - Menghapus data paling akhir</strong>
+						</li>
+						<li>
+							<strong>PopMid - Menghapus data di tengah (sesuai parameter value)</strong>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<p style="text-align: justify;">
+				Contoh pembuatan single linked list untuk menyimpan nama 
+				seseorang beserta umurnya.
+			</p>
+
+			<h3><strong>Deklarasi Struct</strong></h3>
+			<pre class="prettyprint">
+				#include "stdio.h"
+				#include "stdlib.h"
+				#include "string.h"
+							
+					struct human{
+						//menampung integer umur
+						int age;
+						//menampung nama manusia
+						char name[30];
+						//menampung alamat dari data selanjutnya
+						human *next;
+					}*head, *tail, *current;
+					//head adalah pointer yang menyimpan alamat data pertama
+					//tail adalah pointer yang menyimpan alamat data terakhir
+					//current adalah pointer yang digunakan sebagai temporary variabel
+			</pre>
+
+			<h3><strong>Push Head</strong></h3>
+			<pre class="prettyprint">
+				void pushTail(int age, char name[]){
+					//alokasi memory untuk data baru
+					current = (human*)malloc(sizeof(struct human));
+					//assign data ke dalam struct
+					current->age = age;
+					strcpy(current->name, name);
+				
+					//apabila linked list kosong/tidak ada data
+					if(head == NULL){
+						head = tail = current;
+					}
+					//kondisi tidak kosong
+					else{
+						tail->next = current;
+						tail = current;
+					}
+					tail->next = NULL;
+				}
+			</pre>
+
+			<h3><strong>Push Mid</strong></h3>
+			<pre class="prettyprint">
+				void pushMid(int age, char name[]){
+					//alokasi memory untuk data baru
+					current = (human*)malloc(sizeof(struct human));
+					//assign data ke dalam struct
+					current->age = age;
+					strcpy(current->name, name);
+				
+					//apabila linked list kosong/tidak ada data
+					if(head == NULL){
+						head = tail = current;
+					}
+					//jika umur data yang barusan dimasukkan lebih kecil dari umur data pertama (head)
+					else if(current->age < head->age){
+						pushHead(age, name);
+					}
+					//jika umur data yang barusan dimasukkan lebih besar dari umur data terakhir (tail)
+					else if(current->age > tail->age){
+						pushTail(age, name);
+					}
+					//push ditengah-tengah
+					else{
+						human *temp = head;
+						//mencari posisi data yang sesuai untuk diselipkan
+						while(temp->next->age < current->age){
+							temp = temp->next;
+						}
+						current->next = temp->next;
+						//mengarahkan penunjuk ke alamat data baru
+						temp->next = current;
+					}
+			</pre>
+
+			<h3><strong>Pop Head</strong></h3>
+			<pre class="prettyprint">
+				void popHead(){
+					//inisialisasi current sebagai head
+					current=head;
+					//jika head kosong (tidak ada data)
+					if(head==NULL){
+						//cetak tidak ada data
+						printf("No data");
+					//jika head dan tail itu sama (hanya 1 data)
+					}else if(head==tail){
+						//head dan tail dikosongkan
+						head=tail=NULL;
+						//hapus data current (head)
+						free(current);
+					}else{
+						//set head menjadi data selanjutnya dari head
+						head=head->next;
+						//hapus data current (head)
+						free(current);
+					}
+				}
+			</pre>
+
+			<h3><strong>Pop Tail</strong></h3>
+			<pre class="prettyprint">
+				void popTail(){
+					//jika head kosong (tidak ada data)
+					if(head==NULL){
+						//cetak tidak ada data
+						printf("No data");
+					//jika head dan tail itu sama (hanya 1 data)
+					}else if(head==tail){
+						//head dan tail dikosongkan
+						head=tail=NULL;
+						//hapus data current (head)
+						free(current);
+					}else{
+						//buat variabel penampung baru dan assign nilai mulai dari head
+						human *temp=head;
+						//looping untuk mencari posisi 1 data sebelum tail
+						while(temp->next!=tail){
+							//temp diubah menjadi 1 data selanjutnya
+							temp=temp->next;
+						}
+						//set data current menjadi tail
+						current=tail;
+						//set tail menjadi 1 data sebelum tail (hasil looping)
+						tail=temp;
+						//hapus data current (tail)
+						free(current);
+						//data setelah next dikosongkan/pointer next punya tail diberi NULL
+						tail->next=NULL;
+					}
+				}
+			</pre>
+
+			<h3><strong>Pop Mid</strong></h3>
+			<pre class="prettyprint">
+				//kita akan menghapus data sesuai dengan umurnya.
+				void popMid(int age){
+					//jika head kosong (tidak ada data)
+					if(head==NULL){
+						printf("No data");
+					//jika umur si head(data pertama) sama dengan data umur yang mau dihapus
+					}else if(head->age==age){
+						//pop head
+						popHead();
+					//jika umur si tail(data terakhir) sama dengan data umur yang mau dihapus
+					}else if(tail->age==age){
+						//pop tail
+						popTail();
+					}else{
+						//buat variabel penampung baru dan assign nilai mulai dari head
+						human *temp=head;
+						//looping untuk mencari posisi 1 data sebelum tail
+						while(temp->next->age!=age && temp!=tail){
+							//temp diubah menjadi 1 data selanjutnya
+							temp=temp->next;
+						}
+						//set data current menjadi data selanjutnya dari temp
+						current=temp->next;
+						//data selanjutnya dari temp diubah menjadi 2 data setelah temp
+						temp->next=temp->next->next;
+						//hapus data current
+						free(current);
+					}
+				}
+			</pre>
+
+			<h3><strong>Pop Mid</strong></h3>
+			<pre class="prettyprint">
+				void popAll(){
+					while(head!=NULL){
+						popHead();
+					}
+				}
+			</pre>
+
+			<h3><strong>Print Data</strong></h3>
+			<pre class="prettyprint">
+				void print(){
+					current = head;
+					while(current != NULL){
+						printf("%s - %d\n",current->name,current->age);
+						current = current->next;
+					}
+				}
+			</pre>
+
+			<h3><strong>Main Function</strong></h3>
+			<pre class="prettyprint">
+				int main(){
+					pushMid(18, "hery");
+					pushMid(17, "mahirkoding");
+					pushTail(22, "andi");
+					pushHead(15, "tono");
+					pushMid(11, "vandoro");
+					pushMid(23, "budi");
+					popHead();
+					popTail();
+					popMid(15);
+						//popAll();
+					print();
+					getchar();
+					return 0;
+				}
+			</pre>
+
+			<p style="text-align: justify;">
+				Dukung terus <strong>Pintar C</strong> agar selalu mengupdate artikel dengan cara like
+				dan share artikel ini. Terima kasih.
+			</p>
+
+			<br/>	
+			<h3>Related Posts</h3><br/>
+
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/java.png" alt="...">
+					<div class="caption">
+						<h3><a href="2.html">Pengenalan Bahasa Java</a></h3>
+						<p>
+							Java adalah salah satu bahasa pemrograman <strong>berorerientasi objek</strong> yang dikembangkan 
+							oleh <em>Sun Microsystems</em> sejak tahun 1991. Bahasa ini dikembangkan dengan model yang 
+							mirip dengan bahasa C++ dan Smalltalk, namun dirancang agar...
+						</p>								
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/c.jpg" alt="...">
+					<div class="caption">
+						<h3><a href="single.html">Operator dalam Bahasa C</a></h3>
+						<p>
+							Operator dan Operand dalam Bahasa C merupakan sebuah istilah yang tidak asing lagi dalam 
+							pemrograman. Operator adalah simbol atau karakter yang...
+						</p>								
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/js.png" alt="...">
+					<div class="caption">
+						<h3><a href="4.html">Javascript – Array Function pada ES6</a></h3>
+						<p>
+							Pada artikel ini, kita akan membahas fitur baru di ES6 yaitu array helper function. 
+							Ada beberapa function yang sering digunakan untuk melakukan operasi pada...
+						</p>	
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<br/>
+	
+	
+	<div class="clearfix"></div>
+		
+	<nav class="navbar navbar-default" style="bottom: 0;margin: 0">
+		<div class="container">			
+			<ul class="nav navbar-nav">
+				<li><a href="#">Copyright @ 2019 Anas Aditia Nugraha. All rights reserved.</a></li>				
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Develop by www.pintarc.com</a></li>									
+			</ul>
+		</div>
+	</nav>
+	
+</body>
+</html>

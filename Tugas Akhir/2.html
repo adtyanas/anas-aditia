@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Java</title>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">	
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap.min.js"></script>
+</head>
+<body>	
+	<!-- membuat menu navigasi -->
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Pintar C</a>
+			</div>
+			
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="profil.html">Profil <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tutorial <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="single.html">C</a></li>
+							<li><a href="3.html">Struct Data C</a></li>
+							<li><a href="4.html">Javascript</a></li>							
+							<li><a href="2.html">Java</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" data-toggle="modal" data-target="#modal-login">Login</a></li>					
+					<li><button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#modal-daftar">Daftar</button></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>	
+
+	<!-- Modal -->
+	<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Login</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" class="form-control">
+						</div>						
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+					<button type="button" class="btn btn-primary">Login</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal-daftar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Daftar</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label>Nama</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" class="form-control">
+						</div>						
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+					<button type="button" class="btn btn-primary">Daftar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- akhir modal -->
+
+	<!-- akhir menu navigasi -->
+
+	<div class="container">	
+		<div class="col-md-12" style="padding: 0">
+			<ol class="breadcrumb">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">Tutorial</a></li>
+				<li class="active">Tutorial Java : Pengenalan Bahasa Java</li>
+			</ol>
+		</div>
+
+		<div class="col-md-12" style="padding: 0">
+			<h2 style="margin-top: 0">Pengenalan Bahasa Java</h2>
+			<br/>
+			<div class="thumbnail">
+				<img src="gambar/java.png">
+			</div>
+			<p style="text-align: justify;">
+				<strong>Pintar C -</strong>
+				 Java adalah salah satu bahasa pemrograman <strong>berorerientasi objek</strong> yang dikembangkan 
+				oleh <em>Sun Microsystems</em> sejak tahun 1991. Bahasa ini dikembangkan dengan model yang 
+				mirip dengan bahasa C++ dan Smalltalk, namun dirancang agar lebih mudah dipakai dan 
+				­platform independent, yaitu <span style="text-decoration: underline;"> <em>dapat dijalankan di berbagai jenis sistem operasi</em></span> dan 
+				arsitektur komputer­­. Oleh karena itu, Java bisa dipergunakan dalam pembangunan 
+				software berbasis web, desktop, mobile, dan lainnya.
+			</p>
+
+			<p style="text-align: justify;">
+				Platform independent berarti program yang ditulis dalam bahasa Java dapat dengan 
+				mudah dipindahkan antar berbagai jenis sistem operasi dan berbagai jenis arsitektur 
+				komputer. Aspek ini sangat penting untuk dapat mencapai tujuan Java sebagai bahasa 
+				pemrograman Internet di mana sebuah program akan dijalankan oleh berbagai jenis 
+				komputer dengan berbagai jenis sistem operasi. Sifat ini berlaku untuk level 
+				<span style="text-decoration: underline;"><strong>source code dan binary code</strong></span> 
+				dari program Java. Berbeda dengan bahasa C dan C++, semua tipe 
+				data dalam bahasa Java mempunyai ukuran yang konsisten di semua jenis platform. Source 
+				code program Java sendiri tidak perlu dirubah sama sekali jika Anda ingin mengkompile 
+				ulang di platform lain. Hasil dari mengkompile source code Java bukanlah kode 
+				mesin atau instruksi prosesor yang spesifik terhadap mesin tertentu, melainkan 
+				berupa bytecode yang berupa file berekstensi .class. Bytecode tersebut dapat langsung Anda 
+				eksekusi di tiap platform yang dengan menggunakan <strong>Java Virtual Machine (JVM)</strong>
+				sebagai <strong>interpreter</strong> terhadap bytecode tersebut.
+			</p>
+			
+			<p style="text-align: justify;">
+				<strong>JVM</strong> sendiri adalah sebuah aplikasi yang berjalan di atas sebuah sistem operasi dan 
+				menerjemahkan bytecode program Java dan mengeksekusinya, sehingga secara konsep 
+				bisa dianggap sebagai sebuah interpreter.
+			</p>
+
+			<div id="attachment_574" style="width: 372px" class="wp-caption aligncenter">
+				<img aria-describedby="caption-attachment-574" src="gambar/image01.gif" alt width="362" height="91">
+			</div>
+
+			<p style="text-align: justify;">
+				Dengan cara ini, sebuah program Java yang telah dikompilasi akan dapat 
+				berjalan di platform mana saja, asalkan ada JVM di sana. Kompiler dan 
+				interpreter untuk program Java berbentuk Java Development Kit (JDK) 
+				yang diproduksi oleh Sun Microsystems. JDK ini dapat didownload gratis dari situs java.
+				Interpreter untuk program Java sendiri sering juga disebut <strong>Java Runtime</strong> atau 
+				<span style="text-decoration:underline;">Java Virtual Machine</span> .Interpreter Java, tanpa kompilernya, disebut Java Runtime Environment (JRE).
+				Untuk mengembangkan program Java dibutuhkan JDK, sementara jika hanya ingin menjalankan bytecode 
+				Java cukup dengan JRE saja.
+			</p>
+
+			<p style="text-align: justify;">
+				<strong>JDK (Java Development Kit)</strong> = dipergunakan jika ingin mendevelop aplikasi 
+				java, karena di dalamnya terdapat library, compiler dan debugger.
+			</p>
+
+			<p style="text-align: justify;">
+				<strong>JRE (Java Runtime Environment)</strong> = dipergunakan untuk menjalankan aplikasi berbasis java.
+			</p>
+				
+			<p style="text-align: justify;">
+				Jadi, jika ingin melakukan development program java, cukup menginstall JDK saja karena di JDK 
+				adalah “bapaknya” JRE. Di dalam JDK, sudah termasuk fitur-fitur untuk runtime yang ada pada JRE.
+			</p>
+
+			<p style="text-align: justify;">
+				Beberapa keunggulan java yaitu java merupakan bahasa yang sederhana. 
+				Java dirancang agar mudah dipelajari dan digunakan secara efektif. Java 
+				tidak menyediakan fitur-fitur rumit bahasa pemrograman tingkat tinggi, 
+				serta banyak pekerjaan pemrograman yang mulanya harus dilakukan manual, 
+				sekarang digantikan dikerjakan Java secara otomatis seperti dealokasi memori. 
+				Bagi pemrogram yang sudah mengenal bahasa C/C++ akan cepat belajar susunan bahasa Java.
+			</p>
+
+			<p style="text-align: justify;">
+				Java merupakan <strong>bahasa berorientasi objek (OOP)</strong> yaitu cara ampuh dalam 
+				pengorganisasian dan pengembangan perangkat lunak. Pada OOP, program komputer 
+				sebagai kelompok objek yang saling berinteraksi. Deskripsi ringkas OOP adalah 
+				mengorganisasikan program sebagai kumpulan komponen, disebut objek.<strong>Objek-objek</strong> 
+				ini ada secara independen, mempunyai aturan-aturan berkomunikasi dengan objek lain dan 
+				untuk memerintahkan objek lain guna meminta informasi tertentu atau meminta objek lain 
+				mengerjakan sesuatu. Kelas bertindak sebagai modul sekaligus tipe. Sebagai tipe maka 
+				pada saat jalan, program menciptakan objek-objek yang merupakan instan-instan kelas. 
+				Kelas dapat mewarisi kelas lain. Java tidak mengijinkan pewarisan jamak namun 
+				menyelesaikan kebutuhan pewarisan jamak dengan fasilitas antarmuka yang lebih elegan.
+			</p>
+
+			<p style="text-align: justify;">
+				Mungkin itu saja sedikit penjelasan singkat mengenai pengenalan java, kelebihan 
+				java dan alasan mengapa kita harus menggunakan java dalam kasus yang tepat. Masih 
+				banyak lagi fitur-fitur dari java yang belum saya sebutkan, untuk lebih mendalam tentang 
+				pengenalan java dan penggunaannya akan kita bahas satu per satu di blog ini.
+			</p>
+
+			<br/>	
+			<h3>Related Posts</h3><br/>
+
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/c.jpg" alt="...">
+					<div class="caption">
+						<h3><a href="single.html">Operator dalam Bahasa C</a></h3>
+						<p>
+							Operator dan Operand dalam Bahasa C merupakan sebuah istilah yang tidak asing lagi dalam 
+							pemrograman. Operator adalah simbol atau karakter yang...
+						</p>								
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/data_struct.jpg" alt="...">
+					<div class="caption">
+						<h3><a href="3.html">Tutorial Struct Data C - Single Linked List</a></h3>
+						<p>
+							Single Linked List adalah salah satu bentuk
+							implementasi dari struktur data yang paling sederhana. Seperti
+							yang dijelaskan sebelumnya dalam...
+						</p>								
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="gambar/js.png" alt="...">
+					<div class="caption">
+						<h3><a href="4.html">Javascript – Array Function pada ES6</a></h3>
+						<p>
+							Pada artikel ini, kita akan membahas fitur baru di ES6 yaitu array helper function. 
+							Ada beberapa function yang sering digunakan untuk melakukan operasi pada...
+						</p>	
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<br/>
+	
+	
+	<div class="clearfix"></div>
+		
+	<nav class="navbar navbar-default" style="bottom: 0;margin: 0">
+		<div class="container">			
+			<ul class="nav navbar-nav">
+				<li><a href="#">Copyright @ 2019 Anas Aditia Nugraha. All rights reserved.</a></li>				
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Develop by www.pintarc.com</a></li>									
+			</ul>
+		</div>
+	</nav>
+	
+</body>
+</html>

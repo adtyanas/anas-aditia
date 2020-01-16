@@ -1,0 +1,35 @@
+h1
+{
+    background-color: pink;
+    color: blue;
+    text-align: center;
+    border-top-style: dotted;
+    border-bottom-style : groove;
+    border-left-style: solid;
+    border-right-style: inherit;
+    border-left-color: blue;
+    border-right-color: blueviolet; 
+    border-top-color: brown;
+    border-width: 4px;
+}
+
+body
+{background-color: antiquewhite;}
+
+p{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: grey;
+    text-align: left;
+}
+
+.besar
+{
+    font-size: 30px;
+}
+
+#kecil
+{
+    font-size: 10px;
+    color: darkmagenta;
+}

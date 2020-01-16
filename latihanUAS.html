@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>latihan</title>
+</head>
+<body>
+    <h4>LATIHAN JS</h4>
+    <table border="1">
+        <tr>
+            <td>NIM</td>
+            <td><input type="text" id="nim"></td>
+        </tr>
+        <tr>
+            <td>NAMA</td>
+            <td><input type="text" id="nama"></td>
+        </tr>
+        <tr>
+            <td>NILAI TUGAS</td>
+            <td><input type="text" id="nTugas"></td>
+        </tr>
+        <tr>
+            <td>NILAI UTS</td>
+            <td><input type="text" id="nUTS"></td>
+        </tr>
+        <tr>
+            <td>NILAI UAS</td>
+            <td><input type="text" id="nUAS"></td>
+        </tr>
+        <tr>
+            <td>NILAI AKHIR</td>
+            <td><input type="text" id="nAkhir"></td>
+        </tr>
+    </table>
+    
+    <br/>
+    <input type="submit" onclick="hitung()" value="SIMPAN">
+    <br/><br/>
+
+    <table border="1">
+        <tr>
+            <td>NIM</td>
+            <td>NAMA</td>
+            <td>NILAI AKHIR</td>
+            <td>STATUS</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="nim2"></td>
+            <td><input type="text" id="nama2"></td>
+            <td><input type="text" id="nAkhir2"></td>
+            <td><input type="text" id="status"></td>
+        </tr>
+    </table>
+
+    <script language="JavaScript" type="text/javascript">
+        function hitung()
+        {
+            var nim = document.getElementById("nim").value;
+            var nama = document.getElementById("nama").value;
+            var nim2 = document.getElementById("nim2");
+            var nama2 = document.getElementById("nama2");
+            var nTugas = parseInt(document.getElementById("nTugas").value);
+            var nUTS = parseInt(document.getElementById("nUTS").value);
+            var nUAS = parseInt(document.getElementById("nUAS").value);
+            var nAkhir = document.getElementById("nAkhir");
+            var nAkhir2 = document.getElementById("nAkhir2");
+            var status = document.getElementById("status");
+            var hasil;
+            var hasilStatus;
+
+            hasil = (nTugas*40/100)+(nUTS*30/100)+(nUAS*30/100);
+            nAkhir.value=hasil;
+            nAkhir2.value=hasil;
+
+            nim2.value = nim;            
+            nama2.value = nama;
+
+            if(hasil<60)
+            {
+                hasilStatus = "TIDAK LULUS";
+            }
+            else if(hasil>60 && hasil<=100)
+            {
+                hasilStatus = "LULUS";
+            }
+            else
+            {
+                hasilStatus = "N/A";
+            }
+            status.value = hasilStatus;
+
+
+            
+        }
+
+    </script>
+    
+
+</body>
+</html>
